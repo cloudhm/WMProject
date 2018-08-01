@@ -11,9 +11,20 @@ s.requires_arc  = true
 s.swift_version = '4.0'
 s.default_subspec = 'Core'
 s.static_framework = true
+
+s.subspec 'Addition' do |addition|
+  addition.source_files = 'Classes/Core/Addition/*.{swift}'
+end
+
+s.subspec 'Animator' do |animator|
+  animator.source_files = 'Classes/Core/Animator/*.{swift}'
+end
+
 s.subspec 'Core' do |core|
   core.source_files = 'Classes/Core/*.{swift}'
   core.dependency 'SDWebImage'
+  core.dependency 'WMProject/Addition'
+  core.dependency 'WMProject/Animator'
 end
 
 end

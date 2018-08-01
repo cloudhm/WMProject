@@ -95,6 +95,8 @@
 		6137E84B21117F8700E7CD29 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6137E85B211197AF00E7CD29 /* Addition */,
+				6137E85A211197A600E7CD29 /* Animator */,
 				6137E84C21117F8E00E7CD29 /* Core */,
 			);
 			path = Classes;
@@ -103,8 +105,6 @@
 		6137E84C21117F8E00E7CD29 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6137E85B211197AF00E7CD29 /* Addition */,
-				6137E85A211197A600E7CD29 /* Animator */,
 				6137E856211192FA00E7CD29 /* BaseTabBarController.swift */,
 				6137E85021117FA800E7CD29 /* BaseCollectionView.swift */,
 				6137E84E21117FA800E7CD29 /* BaseController.swift */,

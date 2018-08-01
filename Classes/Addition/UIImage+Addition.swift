@@ -8,8 +8,8 @@
 
 import Foundation
 import UIKit
-extension UIImage {
-    static func imageWithColor(_ color:UIColor) -> UIImage {
+public extension UIImage {
+    public static func imageWithColor(_ color:UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -19,7 +19,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
-    static func roundRectImageWithColor(_ color:UIColor, _ rect : CGRect) -> UIImage {
+    public static func roundRectImageWithColor(_ color:UIColor, _ rect : CGRect) -> UIImage {
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
         let bezierPath = UIBezierPath(roundedRect: rect, cornerRadius: 5)
@@ -30,7 +30,7 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
-    static func compressImage(_ image : UIImage?, _ compressionQuality : CGFloat? = nil)-> Data? {
+    public static func compressImage(_ image : UIImage?, _ compressionQuality : CGFloat? = nil)-> Data? {
         if let image = image {
             if let imageData = UIImageJPEGRepresentation(image, compressionQuality != nil ? compressionQuality! : 1) {
                 while (imageData.count > 1024 * 1024 * 3) {
