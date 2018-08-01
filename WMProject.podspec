@@ -13,11 +13,11 @@ s.default_subspec = 'Core'
 s.static_framework = true
 
 s.subspec 'Addition' do |addition|
-  addition.source_files = 'Classes/Core/Addition/*.{swift}'
+  addition.source_files = 'Classes/Addition/*.{swift}'
 end
 
 s.subspec 'Animator' do |animator|
-  animator.source_files = 'Classes/Core/Animator/*.{swift}'
+  animator.source_files = 'Classes/Animator/*.{swift}'
 end
 
 s.subspec 'Core' do |core|
