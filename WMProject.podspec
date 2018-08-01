@@ -11,11 +11,10 @@ s.source_files  = 'Source/*.{swift}'
 s.requires_arc  = true
 s.swift_version = '4.0'
 s.default_subspec = 'Core'
-
+s.static_framework = true
 s.subspec 'Core' do |core|
-  core.source_file = 'Classes/Core/*.swift'
+  core.source_files = 'Classes/Core/*.{swift}'
   core.dependency 'SDWebImage'
-  core.s.static_framework = true
 end
 
 end

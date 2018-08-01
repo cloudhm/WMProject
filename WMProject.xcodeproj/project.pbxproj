@@ -57,6 +57,7 @@
 		6137E82D21117A5400E7CD29 = {
 			isa = PBXGroup;
 			children = (
+				6137E84B21117F8700E7CD29 /* Classes */,
 				6137E83821117A5400E7CD29 /* WMProject */,
 				6137E83721117A5400E7CD29 /* Products */,
 				A1587B03D91C324500BE7849 /* Pods */,
@@ -75,7 +76,6 @@
 		6137E83821117A5400E7CD29 /* WMProject */ = {
 			isa = PBXGroup;
 			children = (
-				6137E84B21117F8700E7CD29 /* Classes */,
 				6137E83921117A5400E7CD29 /* AppDelegate.swift */,
 				6137E83B21117A5400E7CD29 /* ViewController.swift */,
 				6137E83D21117A5400E7CD29 /* Main.storyboard */,
