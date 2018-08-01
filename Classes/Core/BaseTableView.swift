@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableView: UITableView {
+public class BaseTableView: UITableView {
     /**
      * MARK: initialization
      * @params: hideNullCell, default value is true, if true then hide other cell 

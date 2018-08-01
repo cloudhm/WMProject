@@ -7,7 +7,6 @@ s.license      = 'LICENSE'
 s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
 s.platform     = :ios, '10.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
-s.source_files  = 'Source/*.{swift}'
 s.requires_arc  = true
 s.swift_version = '4.0'
 s.default_subspec = 'Core'

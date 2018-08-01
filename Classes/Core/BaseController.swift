@@ -8,7 +8,7 @@
 
 import UIKit
 import SDWebImage
-class BaseController: UIViewController, UIGestureRecognizerDelegate {
+public class BaseController: UIViewController, UIGestureRecognizerDelegate {
     var canRefresh : Bool = true
     var canSideBack : Bool = false
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
