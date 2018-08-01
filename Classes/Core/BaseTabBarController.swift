@@ -7,8 +7,8 @@
 //
 
 import UIKit
-class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-    override func awakeFromNib() {
+open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         for item in tabBar.items! {
             item.image = item.image?.withRenderingMode(.alwaysOriginal)
@@ -26,7 +26,7 @@ class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
         delegate = self
     }
     // MARK: UITabBarControllerDelegate
-    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         guard let fromIndex = tabBarController.viewControllers?.index(of: fromVC) else { return nil }
         guard let toIndex = tabBarController.viewControllers?.index(of: toVC) else { return nil }
         /**
