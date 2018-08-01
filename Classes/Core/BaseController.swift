@@ -9,16 +9,16 @@
 import UIKit
 import SDWebImage
 public class BaseController: UIViewController, UIGestureRecognizerDelegate {
-    var canRefresh : Bool = true
-    var canSideBack : Bool = false
+    open var canRefresh : Bool = true
+    open var canSideBack : Bool = false
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.hidesBottomBarWhenPushed = true
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = .init(rawValue: 0)
         extendedLayoutIncludesOpaqueBars = true;
@@ -30,7 +30,7 @@ public class BaseController: UIViewController, UIGestureRecognizerDelegate {
         }
         configureNavigationItem()
     }
-    override func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
     }
@@ -59,12 +59,12 @@ public class BaseController: UIViewController, UIGestureRecognizerDelegate {
     open func configureCustomizedNavigationBar(){
         
     }
-    override func didReceiveMemoryWarning() {
+    open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         SDImageCache.shared().clearMemory()
     }
     // MARK: UIGestureRecognizerDelegate
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return self.canSideBack
     }
     deinit {

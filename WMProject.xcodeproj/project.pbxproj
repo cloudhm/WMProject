@@ -18,6 +18,7 @@
 		6137E85421117FA800E7CD29 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E85021117FA800E7CD29 /* BaseCollectionView.swift */; };
 		6137E857211192FA00E7CD29 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E856211192FA00E7CD29 /* BaseTabBarController.swift */; };
 		6137E859211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E858211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift */; };
+		6137E85D211197BA00E7CD29 /* UIImage+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		6137E85021117FA800E7CD29 /* BaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
 		6137E856211192FA00E7CD29 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		6137E858211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLSlideTransitionAnimator.swift; sourceTree = "<group>"; };
+		6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Addition.swift"; sourceTree = "<group>"; };
 		65A9A5026FFD16AA6A8F85EA /* Pods-WMProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMProject/Pods-WMProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AF50BF1A43CF6AAF6A075C11 /* Pods-WMProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-WMProject/Pods-WMProject.release.xcconfig"; sourceTree = "<group>"; };
 		BB54AD7095ED0612A2E696F3 /* Pods_WMProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WMProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,13 +103,30 @@
 		6137E84C21117F8E00E7CD29 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				6137E858211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift */,
+				6137E85B211197AF00E7CD29 /* Addition */,
+				6137E85A211197A600E7CD29 /* Animator */,
 				6137E856211192FA00E7CD29 /* BaseTabBarController.swift */,
 				6137E85021117FA800E7CD29 /* BaseCollectionView.swift */,
 				6137E84E21117FA800E7CD29 /* BaseController.swift */,
 				6137E84F21117FA800E7CD29 /* BaseTableView.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		6137E85A211197A600E7CD29 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				6137E858211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		6137E85B211197AF00E7CD29 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */,
+			);
+			path = Addition;
 			sourceTree = "<group>";
 		};
 		A1587B03D91C324500BE7849 /* Pods */ = {
@@ -234,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6137E83C21117A5400E7CD29 /* ViewController.swift in Sources */,
+				6137E85D211197BA00E7CD29 /* UIImage+Addition.swift in Sources */,
 				6137E83A21117A5400E7CD29 /* AppDelegate.swift in Sources */,
 				6137E857211192FA00E7CD29 /* BaseTabBarController.swift in Sources */,
 				6137E85221117FA800E7CD29 /* BaseController.swift in Sources */,

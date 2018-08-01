@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 class AAPLSlideTransitionAnimator : NSObject, UIViewControllerAnimatedTransitioning {
     var targetEdge : UIRectEdge!
     init(_ targetEdge : UIRectEdge) {

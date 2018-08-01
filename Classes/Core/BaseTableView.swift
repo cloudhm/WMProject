@@ -28,7 +28,7 @@ public class BaseTableView: UITableView {
             }
         }
     }
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureTableView()
     }
