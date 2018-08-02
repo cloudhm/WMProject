@@ -14,7 +14,7 @@ open class BaseTableView: UITableView {
      * @params: hideNullCell, default value is true, if true then hide other cell 
      * @params: useCustomizedSeperator, default value is false, if true, then hide all
      */
-    init(_ useCustomizedSeperator : Bool? = true, _ hideNullCell : Bool? = true) {
+    public init(_ useCustomizedSeperator : Bool? = true, _ hideNullCell : Bool? = true) {
         super.init(frame: .zero, style: .plain)
         configureTableView()
         if let useCustomizedSeperator = useCustomizedSeperator {
