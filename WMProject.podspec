@@ -23,7 +23,7 @@ end
 s.subspec 'Selection' do |selection|
   selection.source_files = 'Classes/Components/Selection'
   selection.dependency 'SnapKit'
-  selection.dependency 'WMProject/Addition'
+  selection.dependency 'WMProject/Animator'
 end
 
 s.subspec 'Core' do |core|
