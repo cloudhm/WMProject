@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.10'
+s.version      = '1.0.11'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -21,9 +21,15 @@ s.subspec 'Animator' do |animator|
 end
 
 s.subspec 'Selection' do |selection|
-  selection.source_files = 'Classes/Components/Selection'
+  selection.source_files = 'Classes/Components/Selection/*.{swift}'
   selection.dependency 'SnapKit'
   selection.dependency 'WMProject/Animator'
+end
+
+s.subspec 'DatePicker' do |datepicker|
+  datepicker.source_files = 'Classes/Components/DatePicker/*.{swift}'
+  datepicker.dependency 'SnapKit'
+  datepicker.dependency 'WMProject/Animator'
 end
 
 s.subspec 'Core' do |core|
