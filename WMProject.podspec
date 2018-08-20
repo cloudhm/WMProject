@@ -21,7 +21,8 @@ s.subspec 'Animator' do |animator|
 end
 
 s.subspec 'Components' do |components|
-  components.source_files = 'Classes/Components'
+  components.source_files = 'Classes/Components/Selection/*.{swift}'
+  components.source_files = 'Classes/Components/DatePicker/*.{swift}'
   components.dependency 'SnapKit'
   components.dependency 'WMProject/Animator'
 end
