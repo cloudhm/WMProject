@@ -50,7 +50,7 @@ public extension SelectorBean {
         return currentLayer
     }
     // MARK: calculate how many rows in assigned component
-    static func rowsInPickerView(_ selectorBeans : [SelectorBean] , _ pickerView : UIPickerView, _ inComponent : Int) -> Int {
+    public static func rowsInPickerView(_ selectorBeans : [SelectorBean] , _ pickerView : UIPickerView, _ inComponent : Int) -> Int {
         return rowsInPickerView(selectorBeans, pickerView, inComponent, 0).count
     }
     private static func rowsInPickerView(_ selectorBeans : [SelectorBean] , _ pickerView : UIPickerView, _ inComponent : Int, _ currentComponent : Int) -> [SelectorBean] {
@@ -69,7 +69,7 @@ public extension SelectorBean {
         }
     }
     // MARK:  fetch assigned component's row display content
-    static func pickerView(_ selectorBeans : [SelectorBean] , _ pickerView: UIPickerView, titleForRow row: Int, _ inComponent : Int) -> String? {
+    public static func pickerView(_ selectorBeans : [SelectorBean] , _ pickerView: UIPickerView, titleForRow row: Int, _ inComponent : Int) -> String? {
         let res : [SelectorBean] = rowsInPickerView(selectorBeans, pickerView, inComponent, 0)
         if row < res.count {
             let selectorBean : SelectorBean? = res[row]
@@ -79,7 +79,7 @@ public extension SelectorBean {
         }
     }
     // MARK: fetch pickerView selected option
-    static func selectedOptionInPickerView(_ selectorBeans : [SelectorBean], _ pickerView : UIPickerView) -> [SelectorBean?] {
+    public static func selectedOptionInPickerView(_ selectorBeans : [SelectorBean], _ pickerView : UIPickerView) -> [SelectorBean?] {
         return selectedOptionInPickerView(selectorBeans, pickerView, (analyticsSelectorBeansLayer(selectorBeans) - 1), 0, [])
     }
     private static func selectedOptionInPickerView(_ selectorBeans : [SelectorBean], _ pickerView : UIPickerView, _ inComponent : Int, _ currentComponent : Int, _ list : [SelectorBean?]) -> [SelectorBean?] {
@@ -96,7 +96,7 @@ public extension SelectorBean {
         }
     }
     // MARK: fetch selectorBeans by [String?]
-    static func fetchSelectorBeans(_ selectorBeans : [SelectorBean], _ titles : [String?]?) -> [Int] {
+    public static func fetchSelectorBeans(_ selectorBeans : [SelectorBean], _ titles : [String?]?) -> [Int] {
         let columns = analyticsSelectorBeansLayer(selectorBeans)
         var indexs : [Int] = Array<Int>(repeating: -1, count: columns)
         guard let beanNames = titles else {

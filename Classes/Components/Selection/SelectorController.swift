@@ -9,8 +9,10 @@
 import UIKit
 import SnapKit
 public class SelectorController: UIViewController {
-    var cancelBtnTitle : String?
-    var okBtnTitle : String?
+    public var cancelBtnTitle : String?
+    public var okBtnTitle : String?
+    public var selectorBeans : [SelectorBean] = []
+    public var selectedIndexs : [Int] = []
     // MARK: declare variables
     lazy var backView : UIView = {
         var view = UIView()
@@ -36,7 +38,6 @@ public class SelectorController: UIViewController {
         return view
     }()
     let presentedAnimatedTransitioningDelegate : PresentedAnimatedTransitioningDelegate = PresentedAnimatedTransitioningDelegate()
-    var selectorBeans : [SelectorBean]!
     lazy var cancelBtn : UIButton = {
         var btn : UIButton = UIButton()
         btn.setTitle(cancelBtnTitle ?? "Cancel", for: .normal)
@@ -51,7 +52,7 @@ public class SelectorController: UIViewController {
         btn.addTarget(self, action: #selector(tapAction), for: .touchUpInside)
         return btn
     }()
-    var selectedIndexs : [Int] = []
+
     // MARK: initialization
     public init(_ selectorBeans : [SelectorBean], _ selectedIndexs : [Int]) {
         super.init(nibName: nil, bundle: nil)
