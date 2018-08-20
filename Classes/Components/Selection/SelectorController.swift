@@ -13,6 +13,14 @@ public class SelectorController: UIViewController {
     public var okBtnTitle : String?
     public var selectorBeans : [SelectorBean] = []
     public var selectedIndexs : [Int] = []
+    public var actionBlock : ((_ selectorController : SelectorController) -> Void)?
+    public lazy var pickerView : UIPickerView = {
+        var view = UIPickerView()
+        view.dataSource = self
+        view.delegate = self
+        view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9529411765, alpha: 1)
+        return view
+    }()
     // MARK: declare variables
     lazy var backView : UIView = {
         var view = UIView()
@@ -29,14 +37,6 @@ public class SelectorController: UIViewController {
         return view
     }()
     let contentViewHeight : CGFloat = 260
-    public var actionBlock : ((_ selectorController : SelectorController) -> Void)?
-    lazy var pickerView : UIPickerView = {
-        var view = UIPickerView()
-        view.dataSource = self
-        view.delegate = self
-        view.backgroundColor = #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9529411765, alpha: 1)
-        return view
-    }()
     let presentedAnimatedTransitioningDelegate : PresentedAnimatedTransitioningDelegate = PresentedAnimatedTransitioningDelegate()
     lazy var cancelBtn : UIButton = {
         var btn : UIButton = UIButton()
@@ -129,11 +129,11 @@ extension SelectorController {
         dismiss(animated: true, completion: nil)
     }
     @objc func tapAction(_ sender : UIButton){
-        dismiss(animated: true, completion: {
-            if sender == self.confirmBtn {
-                self.actionBlock?(self)
-            }
-        })
+        if sender == confirmBtn {
+            actionBlock?(self)
+        } else {
+            dismiss(animated: true)
+        }
     }
 }
 extension SelectorController : UIPickerViewDataSource {
