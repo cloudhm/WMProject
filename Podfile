@@ -4,4 +4,5 @@ inhibit_all_warnings!
 pod 'SDWebImage'
 pod 'SDWebImage/WebP'
 pod 'SnapKit'
+pod 'FBSDKShareKit'
 end

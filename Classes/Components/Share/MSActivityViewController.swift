@@ -8,8 +8,8 @@
 
 import UIKit
 import FBSDKShareKit
-final class MSActivityViewController: UIActivityViewController {
-    static func showActivityViewController(shareUrl url : URL, from controller : UIViewController) {
+public final class MSActivityViewController: UIActivityViewController {
+    public static func showActivityViewController(shareUrl url : URL, from controller : UIViewController) {
         let activityViewController = UIActivityViewController(activityItems: [url as AnyObject], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = controller.view
         activityViewController.completionWithItemsHandler = {[weak controller] (activityType, finished, items, error) in
