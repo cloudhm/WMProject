@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.11'
+s.version      = '1.0.12'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -9,7 +9,7 @@ s.platform     = :ios, '10.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
 s.requires_arc  = true
 s.swift_version = '4.0'
-s.default_subspec = 'Core', 'Components'
+s.default_subspec = 'Core', 'Selection', 'DatePicker'
 s.static_framework = true
 
 s.subspec 'Addition' do |addition|
@@ -20,11 +20,16 @@ s.subspec 'Animator' do |animator|
   animator.source_files = 'Classes/Animator/*.{swift}'
 end
 
-s.subspec 'Components' do |components|
-  components.source_files = 'Classes/Components/Selection/*.{swift}'
-  components.source_files = 'Classes/Components/DatePicker/*.{swift}'
-  components.dependency 'SnapKit'
-  components.dependency 'WMProject/Animator'
+s.subspec 'Selection' do |selection|
+  selection.source_files = 'Classes/Components/Selection/*.{swift}'
+  selection.dependency 'SnapKit'
+  selection.dependency 'WMProject/Animator'
+end
+
+s.subspec 'DatePicker' do |datepicker|
+  datepicker.source_files = 'Classes/Components/DatePicker/*.{swift}'
+  datepicker.dependency 'SnapKit'
+  datepicker.dependency 'WMProject/Animator'
 end
 
 s.subspec 'Core' do |core|
