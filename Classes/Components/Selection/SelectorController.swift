@@ -27,7 +27,7 @@ public class SelectorController: UIViewController {
         return view
     }()
     let contentViewHeight : CGFloat = 260
-    var actionBlock : ((_ selectorController : SelectorController) -> Void)?
+    public var actionBlock : ((_ selectorController : SelectorController) -> Void)?
     lazy var pickerView : UIPickerView = {
         var view = UIPickerView()
         view.dataSource = self
@@ -53,7 +53,7 @@ public class SelectorController: UIViewController {
     }()
     var selectedIndexs : [Int] = []
     // MARK: initialization
-    init(_ selectorBeans : [SelectorBean], _ selectedIndexs : [Int]) {
+    public init(_ selectorBeans : [SelectorBean], _ selectedIndexs : [Int]) {
         super.init(nibName: nil, bundle: nil)
         modalTransitionStyle = .coverVertical
         modalPresentationStyle = .custom
