@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 public class SelectorBean : Equatable {
     // MARK: declare variables
-    var category : String?
-    var name : String?
-    var markText : String?
-    var subSelectorBeans : [SelectorBean] = []
+    public var category : String?
+    public var name : String?
+    public var markText : String?
+    public var subSelectorBeans : [SelectorBean] = []
     
     // MARK: initialize method
-    init(_ category : String?, _ name : String?, _ markText : String? = nil) {
+    public init(_ category : String?, _ name : String?, _ markText : String? = nil) {
         self.category = category
         self.name = name
         self.markText = markText
