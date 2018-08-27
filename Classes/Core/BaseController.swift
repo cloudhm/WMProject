@@ -11,7 +11,7 @@ import SDWebImage
 open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     open var canRefresh : Bool = true
     open var canSideBack : Bool = false
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.hidesBottomBarWhenPushed = true
     }
