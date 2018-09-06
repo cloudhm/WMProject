@@ -8,6 +8,9 @@
 
 import UIKit
 import SDWebImage
+public extension Notification.Name {
+    static let WMProjectControllerViewDidAppear = Notification.Name("WMProject.BaseController.ViewDidAppear")
+}
 open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     open var canRefresh : Bool = true
     open var canSideBack : Bool = false
@@ -33,6 +36,11 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationBar()
+    }
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name.WMProjectControllerViewDidAppear,
+                                        object: nil)
     }
     open func configureNavigationItem () {
         
