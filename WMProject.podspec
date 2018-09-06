@@ -34,7 +34,7 @@ end
 
 s.subspec 'Share' do |share|
   share.source_files = 'Classes/Components/Share/*.{swift}'
-  share.dependency 'FBSDKShareKit'
+  share.dependency 'FBSDKShareKit', '= 4.34.0'
 end
 
 s.subspec 'Utils' do |utils|
