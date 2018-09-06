@@ -25,6 +25,7 @@
 		6137E86B2111C23900E7CD29 /* UITableViewHeaderFooterView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8652111C23900E7CD29 /* UITableViewHeaderFooterView+Addition.swift */; };
 		6137E86C2111C23900E7CD29 /* UICollectionViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */; };
 		6137E86D2111C23900E7CD29 /* UICollectionView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */; };
+		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
 		61FF7614212A5781007C29B0 /* SelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7612212A5781007C29B0 /* SelectorController.swift */; };
 		61FF7617212A65F7007C29B0 /* PresentedAnimatedTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7615212A65F6007C29B0 /* PresentedAnimatedTransitioningDelegate.swift */; };
@@ -54,6 +55,7 @@
 		6137E8652111C23900E7CD29 /* UITableViewHeaderFooterView+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+Addition.swift"; sourceTree = "<group>"; };
 		6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Addition.swift"; sourceTree = "<group>"; };
 		6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Addition.swift"; sourceTree = "<group>"; };
+		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
 		61FF7612212A5781007C29B0 /* SelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorController.swift; sourceTree = "<group>"; };
 		61FF7615212A65F6007C29B0 /* PresentedAnimatedTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedAnimatedTransitioningDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		6137E84B21117F8700E7CD29 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61A266762140B5BD00BF9551 /* Utils */,
 				61FF760F212A5775007C29B0 /* Components */,
 				6137E85B211197AF00E7CD29 /* Addition */,
 				6137E85A211197A600E7CD29 /* Animator */,
@@ -163,6 +166,14 @@
 				6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */,
 			);
 			path = Addition;
+			sourceTree = "<group>";
+		};
+		61A266762140B5BD00BF9551 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61A266772140B5CF00BF9551 /* LeakAvoider.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		61FF760F212A5775007C29B0 /* Components */ = {
@@ -352,6 +363,7 @@
 				61FF7621212AA962007C29B0 /* DatePickerController.swift in Sources */,
 				6137E859211193B900E7CD29 /* AAPLSlideTransitionAnimator.swift in Sources */,
 				61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */,
+				61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
