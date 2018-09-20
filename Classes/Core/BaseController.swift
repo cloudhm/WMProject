@@ -47,7 +47,7 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     }
     open func configureNavigationBar () {
         UIApplication.shared.setStatusBarStyle(.default, animated: false)
-        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 18, weight: .bold),.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 18, weight: .semibold),.foregroundColor: #colorLiteral(red: 0.3333333333, green: 0.3333333333, blue: 0.3333333333, alpha: 1)]
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.tintColor = .black
