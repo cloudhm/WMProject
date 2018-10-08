@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.19'
+s.version      = '1.0.20'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -44,6 +44,7 @@ end
 s.subspec 'Core' do |core|
   core.source_files = 'Classes/Core/*.{swift}'
   core.dependency 'SDWebImage'
+  core.dependency 'SDWebImage/GIF'
   core.dependency 'WMProject/Addition'
   core.dependency 'WMProject/Animator'
 end
