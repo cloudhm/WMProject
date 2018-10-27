@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.20'
+s.version      = '1.0.21'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -22,7 +22,7 @@ end
 
 s.subspec 'Selection' do |selection|
   selection.source_files = 'Classes/Components/Selection/*.{swift}'
-  selection.dependency 'SnapKit'
+  selection.dependency 'SnapKit', '= 4.2.0'
   selection.dependency 'WMProject/Animator'
 end
 
@@ -34,7 +34,7 @@ end
 
 s.subspec 'Share' do |share|
   share.source_files = 'Classes/Components/Share/*.{swift}'
-  share.dependency 'FBSDKShareKit', '= 4.34.0'
+  share.dependency 'FBSDKShareKit', '= 4.38.0'
 end
 
 s.subspec 'Utils' do |utils|

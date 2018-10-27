@@ -5,10 +5,10 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.35.0):
-    - Bolts (~> 1.7)
-  - FBSDKShareKit (4.35.0):
-    - FBSDKCoreKit (~> 4.35.0)
+  - FBSDKCoreKit (4.38.0):
+    - Bolts (~> 1.9)
+  - FBSDKShareKit (4.38.0):
+    - FBSDKCoreKit
   - libwebp (0.6.1):
     - libwebp/core (= 0.6.1)
     - libwebp/dec (= 0.6.1)
@@ -39,7 +39,7 @@ PODS:
   - SDWebImage/WebP (4.4.2):
     - libwebp (~> 0.5)
     - SDWebImage/Core
-  - SnapKit (4.0.0)
+  - SnapKit (4.2.0)
 
 DEPENDENCIES:
   - FBSDKShareKit
@@ -58,11 +58,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
-  FBSDKShareKit: 2ddbd7e6432023fff957af62e23a3671b84319f7
+  FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
+  FBSDKShareKit: 00290e3db446eed603ff80ac629dcc5e80cf8b74
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
 PODFILE CHECKSUM: d029f45e52f34c9d89ea57c0b1d75b8c06e59cb4
 
