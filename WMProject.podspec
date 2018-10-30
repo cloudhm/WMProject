@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.21'
+s.version      = '1.0.22'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
 s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
-s.platform     = :ios, '10.0'
+s.platform     = :ios, '9.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
 s.requires_arc  = true
 s.swift_version = '4.0'
