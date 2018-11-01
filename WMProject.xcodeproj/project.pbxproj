@@ -26,6 +26,7 @@
 		6137E86C2111C23900E7CD29 /* UICollectionViewCell+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */; };
 		6137E86D2111C23900E7CD29 /* UICollectionView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */; };
 		61798E06218AA3FE008F919C /* OneSignal+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61798E05218AA3FE008F919C /* OneSignal+Addition.swift */; };
+		61798E09218AB1B1008F919C /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61798E08218AB1B1008F919C /* Counter.swift */; };
 		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
 		61FF7614212A5781007C29B0 /* SelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7612212A5781007C29B0 /* SelectorController.swift */; };
@@ -57,6 +58,7 @@
 		6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Addition.swift"; sourceTree = "<group>"; };
 		6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Addition.swift"; sourceTree = "<group>"; };
 		61798E05218AA3FE008F919C /* OneSignal+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneSignal+Addition.swift"; sourceTree = "<group>"; };
+		61798E08218AB1B1008F919C /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
 		61FF7612212A5781007C29B0 /* SelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,14 @@
 			path = OneSignal;
 			sourceTree = "<group>";
 		};
+		61798E07218AB19E008F919C /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				61798E08218AB1B1008F919C /* Counter.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
 		61A266762140B5BD00BF9551 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +199,7 @@
 		61FF760F212A5775007C29B0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				61798E07218AB19E008F919C /* Counter */,
 				61798E04218AA3C9008F919C /* OneSignal */,
 				61FF7625212ABB6F007C29B0 /* Share */,
 				61FF761F212AA955007C29B0 /* DatePicker */,
@@ -361,6 +372,7 @@
 				6137E86C2111C23900E7CD29 /* UICollectionViewCell+Addition.swift in Sources */,
 				6137E83A21117A5400E7CD29 /* AppDelegate.swift in Sources */,
 				6137E8692111C23900E7CD29 /* UICollectionReusableView+Addition.swift in Sources */,
+				61798E09218AB1B1008F919C /* Counter.swift in Sources */,
 				6137E86A2111C23900E7CD29 /* UITableView+Addition.swift in Sources */,
 				6137E857211192FA00E7CD29 /* BaseTabBarController.swift in Sources */,
 				61FF7617212A65F7007C29B0 /* PresentedAnimatedTransitioningDelegate.swift in Sources */,

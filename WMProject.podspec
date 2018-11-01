@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.1.0'
+s.version      = '1.1.1'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -39,6 +39,10 @@ end
 
 s.subspec 'Utils' do |utils|
   utils.source_files = 'Classes/Utils/*.{swift}'
+end
+
+s.subspec 'Counter' do |counter|
+  counter.source_files = 'Classes/Components/Counter/*.{swift}'
 end
 
 s.subspec 'OneSignalAddition' do |onesignal|
