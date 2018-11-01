@@ -8,7 +8,7 @@ s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
 s.platform     = :ios, '9.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
 s.requires_arc  = true
-s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+s.swift_version = '4.2'
 s.default_subspec = 'Core', 'Selection', 'DatePicker', 'Share', 'Utils', 'OneSignalAddition'
 s.static_framework = true
 
