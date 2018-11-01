@@ -13,7 +13,7 @@ public final class MSActivityViewController: UIActivityViewController {
         let activityViewController = UIActivityViewController(activityItems: [url as AnyObject], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = controller.view
         activityViewController.completionWithItemsHandler = {[weak controller] (activityType, finished, items, error) in
-            if activityType == UIActivityType.postToFacebook && (!finished) {
+            if activityType == UIActivity.ActivityType.postToFacebook && (!finished) {
                 // https://developers.facebook.com/docs/apps/review/prefill
                 let shareLinkContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
                 shareLinkContent.contentURL = url

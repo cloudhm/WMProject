@@ -37,6 +37,6 @@ open class BaseTableView: UITableView {
             contentInsetAdjustmentBehavior = .never
         }
         showsVerticalScrollIndicator = false
-        rowHeight = UITableViewAutomaticDimension
+        rowHeight = UITableView.automaticDimension
     }
 }

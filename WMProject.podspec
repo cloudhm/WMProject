@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.0.22'
+s.version      = '1.1.0'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -8,8 +8,8 @@ s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
 s.platform     = :ios, '9.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
 s.requires_arc  = true
-s.swift_version = '4.0'
-s.default_subspec = 'Core', 'Selection', 'DatePicker', 'Share', 'Utils'
+s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+s.default_subspec = 'Core', 'Selection', 'DatePicker', 'Share', 'Utils', 'OneSignalAddition'
 s.static_framework = true
 
 s.subspec 'Addition' do |addition|
@@ -34,11 +34,16 @@ end
 
 s.subspec 'Share' do |share|
   share.source_files = 'Classes/Components/Share/*.{swift}'
-  share.dependency 'FBSDKShareKit', '= 4.38.0'
+  share.dependency 'FBSDKShareKit', '= 4.38.1'
 end
 
 s.subspec 'Utils' do |utils|
   utils.source_files = 'Classes/Utils/*.{swift}'
+end
+
+s.subspec 'OneSignalAddition' do |onesignal|
+  onesignal.source_files = 'Classes/Components/OneSignal/*.{swift}'
+  onesignal.dependency 'OneSignal', '= 2.9.3'
 end
 
 s.subspec 'Core' do |core|

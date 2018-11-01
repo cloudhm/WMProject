@@ -34,15 +34,15 @@ public extension UIImage {
     // https://www.cnblogs.com/silence-cnblogs/p/6346729.html
     public static func compressImage(_ image: UIImage, toByte maxLength: Int? = 1024 * 1024 * 3) -> Data? {
         var compression: CGFloat = 1
-        guard var data = UIImageJPEGRepresentation(image, compression), let maxLength = maxLength,
-            data.count > maxLength else { return UIImageJPEGRepresentation(image, compression) }
+        guard var data = image.jpegData(compressionQuality: compression), let maxLength = maxLength,
+            data.count > maxLength else { return image.jpegData(compressionQuality: compression) }
         
         // Compress by size
         var max: CGFloat = 1
         var min: CGFloat = 0
         for _ in 0..<6 {
             compression = (max + min) / 2
-            data = UIImageJPEGRepresentation(image, compression)!
+            data = image.jpegData(compressionQuality: compression)!
             if CGFloat(data.count) < CGFloat(maxLength) * 0.9 {
                 min = compression
             } else if data.count > maxLength {
@@ -65,7 +65,7 @@ public extension UIImage {
             resultImage.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
             resultImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
-            data = UIImageJPEGRepresentation(resultImage, compression)!
+            data = resultImage.jpegData(compressionQuality: compression)!
         }
         return data
     }

@@ -12,7 +12,7 @@ public extension UIWindow {
     public func switchRootViewController(_ viewController: UIViewController?,
                                   animated: Bool = true,
                                   duration: TimeInterval = 0.5,
-                                  options: UIViewAnimationOptions = .transitionFlipFromRight,
+                                  options: UIView.AnimationOptions = .transitionFlipFromRight,
                                   completion: (() -> Void)? = nil) {
         let oldViewController = rootViewController
         guard animated else {
