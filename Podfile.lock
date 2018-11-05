@@ -5,6 +5,14 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - FacebookCore (0.5.0):
+    - Bolts (~> 1.9)
+    - FBSDKCoreKit (~> 4.37)
+  - FacebookShare (0.5.0):
+    - Bolts (~> 1.9)
+    - FacebookCore (~> 0.5)
+    - FBSDKCoreKit (~> 4.37)
+    - FBSDKShareKit (~> 4.37)
   - FBSDKCoreKit (4.38.1):
     - Bolts (~> 1.9)
   - FBSDKShareKit (4.38.1):
@@ -43,7 +51,7 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - FBSDKShareKit
+  - FacebookShare
   - OneSignal (~> 2.9.2)
   - SDWebImage
   - SDWebImage/WebP
@@ -52,6 +60,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
+    - FacebookCore
+    - FacebookShare
     - FBSDKCoreKit
     - FBSDKShareKit
     - libwebp
@@ -61,6 +71,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  FacebookCore: 74288d0add931d361b1596beae787ab72c438249
+  FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
   FBSDKCoreKit: 8d47857400e2f5bdea697a80daff882e91c84ef6
   FBSDKShareKit: 6ffe22f0a0618eb7424d4104ab0ef3ce9643d42a
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
@@ -68,6 +80,6 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: a82a67e8f3810b387dffc3937348f4718f6475b9
+PODFILE CHECKSUM: 8399a55237c535feb76b2133154677fdc4d36a4d
 
 COCOAPODS: 1.5.2

@@ -5,6 +5,6 @@ inhibit_all_warnings!
 pod 'SDWebImage'
 pod 'SDWebImage/WebP'
 pod 'SnapKit'
-pod 'FBSDKShareKit'
+pod 'FacebookShare'
 pod 'OneSignal', '~> 2.9.2'
 end

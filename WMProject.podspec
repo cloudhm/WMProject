@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.1.2'
+s.version      = '1.1.3'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -34,7 +34,7 @@ end
 
 s.subspec 'Share' do |share|
   share.source_files = 'Classes/Components/Share/*.{swift}'
-  share.dependency 'FBSDKShareKit', '= 4.38.1'
+  share.dependency 'FacebookShare', '= 0.5.0'
 end
 
 s.subspec 'Utils' do |utils|

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FBSDKShareKit
+import FacebookShare
 public final class MSActivityViewController: UIActivityViewController {
     public static func showActivityViewController(shareUrl url : URL, from controller : UIViewController) {
         let activityViewController = UIActivityViewController(activityItems: [url as AnyObject], applicationActivities: nil)
@@ -15,14 +15,12 @@ public final class MSActivityViewController: UIActivityViewController {
         activityViewController.completionWithItemsHandler = {[weak controller] (activityType, finished, items, error) in
             if activityType == UIActivity.ActivityType.postToFacebook && (!finished) {
                 // https://developers.facebook.com/docs/apps/review/prefill
-                let shareLinkContent : FBSDKShareLinkContent = FBSDKShareLinkContent()
-                shareLinkContent.contentURL = url
-                let shareDialog = FBSDKShareDialog()
-                shareDialog.fromViewController = controller
-                shareDialog.shareContent = shareLinkContent
-                if shareDialog.canShow() {
-                    shareDialog.show()
-                }
+                do {
+                    if let controller = controller {
+                        try ShareDialog.show(from: controller,
+                                             content: LinkShareContent(url: url))
+                    }
+                }catch {}
             }
         }
         controller.present(activityViewController, animated: true, completion: nil)
