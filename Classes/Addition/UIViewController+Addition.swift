@@ -28,7 +28,7 @@ fileprivate class BarButtonView: UIView {
             while !(view?.isKind(of: UINavigationBar.self) ?? true) {
                 view = view?.superview
                 if (view?.isKind(of: UIStackView.self) ?? false) && view?.superview != nil {
-                    (view as? UIStackView)?.spacing = 20.0
+                    (view as? UIStackView)?.spacing = 10.0
                     if position == .left {
                         view?.superview?.addConstraint(NSLayoutConstraint(item: view as Any,
                                                                           attribute: .leading,
