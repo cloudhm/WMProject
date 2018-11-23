@@ -32,7 +32,11 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
         /**
          * tabbarController's viewControllers trainsitioning animation
          */
-        return AAPLSlideTransitionAnimator(fromIndex < toIndex ? .left : .right)
+        if UIView.userInterfaceLayoutDirection(for: UIView.appearance().semanticContentAttribute) == .leftToRight {
+            return AAPLSlideTransitionAnimator(fromIndex < toIndex ? .left : .right)
+        } else {
+            return AAPLSlideTransitionAnimator(fromIndex < toIndex ? .right : .left)
+        }
     }
 }
 
