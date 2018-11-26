@@ -7,4 +7,5 @@ pod 'SDWebImage/WebP'
 pod 'SnapKit'
 pod 'FacebookShare'
 pod 'OneSignal', '~> 2.9.2'
+pod 'Alamofire'
 end

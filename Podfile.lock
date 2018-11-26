@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.7.3)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -51,6 +52,7 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - FacebookShare
   - OneSignal (~> 2.9.2)
   - SDWebImage
@@ -59,6 +61,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Bolts
     - FacebookCore
     - FacebookShare
@@ -70,6 +73,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 74288d0add931d361b1596beae787ab72c438249
   FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
@@ -80,6 +84,6 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 8399a55237c535feb76b2133154677fdc4d36a4d
+PODFILE CHECKSUM: 8d99b10db2450f8cda405c294016656b59011b60
 
 COCOAPODS: 1.5.2
