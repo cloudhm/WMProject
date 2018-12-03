@@ -71,23 +71,23 @@ public class DatePickerController: UIViewController {
         }
         view.addSubview(contentView)
         contentView.snp.makeConstraints { (make) in
-            make.left.bottom.right.equalTo(0)
+            make.leading.bottom.trailing.equalTo(0)
             make.height.equalTo(self.contentViewHeight)
         }
         contentView.addSubview(datePicker)
         datePicker.snp.makeConstraints { (make) in
-            make.left.bottom.right.equalTo(0)
+            make.leading.bottom.trailing.equalTo(0)
             make.top.equalTo(44)
         }
         contentView.addSubview(cancelBtn)
         cancelBtn.snp.makeConstraints { (make) in
-            make.left.equalTo(20)
+            make.leading.equalTo(20)
             make.top.equalTo(0)
             make.height.equalTo(44)
         }
         contentView.addSubview(confirmBtn)
         confirmBtn.snp.makeConstraints { (make) in
-            make.right.equalTo(-20)
+            make.trailing.equalTo(-20)
             make.top.equalTo(0)
             make.height.equalTo(44)
         }
