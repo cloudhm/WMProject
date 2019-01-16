@@ -38,5 +38,8 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
             return AAPLSlideTransitionAnimator(fromIndex < toIndex ? .right : .left)
         }
     }
+    open func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        return true
+    }
 }
 
