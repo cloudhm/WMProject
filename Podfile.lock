@@ -18,6 +18,7 @@ PODS:
     - Bolts (~> 1.9)
   - FBSDKShareKit (4.39.1):
     - FBSDKCoreKit
+  - HandyJSON (4.2.1)
   - libwebp (0.6.1):
     - libwebp/core (= 0.6.1)
     - libwebp/dec (= 0.6.1)
@@ -54,6 +55,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FacebookShare
+  - HandyJSON (~> 4.2.0)
   - OneSignal (~> 2.9.2)
   - SDWebImage
   - SDWebImage/WebP
@@ -67,6 +69,7 @@ SPEC REPOS:
     - FacebookShare
     - FBSDKCoreKit
     - FBSDKShareKit
+    - HandyJSON
     - libwebp
     - OneSignal
     - SDWebImage
@@ -79,11 +82,12 @@ SPEC CHECKSUMS:
   FacebookShare: 963b4bb1124a64a395b1e428163d70b5774116e8
   FBSDKCoreKit: f442aa96179cc9b382bb4abeb7e340a47cca8f91
   FBSDKShareKit: 27d7b982e7b1f4638da2f2b1ab6eba5afc6b5888
+  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   libwebp: 0f01098c6c17175391af621b2f14150f3ca16e16
   OneSignal: a41f5a896177275662da07e23d6a809c0e105a89
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 8d99b10db2450f8cda405c294016656b59011b60
+PODFILE CHECKSUM: c5a57e1ba8cee4f8403ef3f34d0366bd9067f391
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0

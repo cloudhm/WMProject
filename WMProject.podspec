@@ -5,7 +5,7 @@ s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
 s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
-s.platform     = :ios, '9.0'
+s.platform     = :ios, '10.0'
 s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
 s.requires_arc  = true
 s.swift_version = '4.2'
@@ -53,10 +53,10 @@ s.subspec 'OneSignalAddition' do |onesignal|
 end
 
 s.subspec 'Core' do |core|
-  core.source_files = 'Classes/Core/*.{swift}'
+  core.source_files = 'Classes/Core/*/*.{swift}'
   core.dependency 'WMProject/Addition'
   core.dependency 'WMProject/Animator'
-  core.dependency 'Alamofire'
+  core.dependency 'Alamofire', 'HandyJSON'
 end
 
 end
