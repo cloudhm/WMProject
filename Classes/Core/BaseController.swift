@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 import Alamofire
 public extension Notification.Name {
     static let WMProjectControllerViewDidAppear = Notification.Name("WMProject.BaseController.ViewDidAppear")
@@ -71,7 +70,7 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     }
     open override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        SDImageCache.shared().clearMemory()
+        MDCache.clearMemory()
     }
     // MARK: UIGestureRecognizerDelegate
     open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {

@@ -36,6 +36,7 @@
 		619FC95B2211427000440A93 /* Dictionary+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95A2211427000440A93 /* Dictionary+Addition.swift */; };
 		619FC95D2211494900440A93 /* CALayer+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95C2211494900440A93 /* CALayer+Addition.swift */; };
 		619FC95F2211497100440A93 /* UIApplication+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95E2211497100440A93 /* UIApplication+Addition.swift */; };
+		619FC9622211572F00440A93 /* MDCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC9612211572F00440A93 /* MDCache.swift */; };
 		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61F4365621917BFF00BB7AE0 /* UIViewController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
@@ -78,6 +79,7 @@
 		619FC95A2211427000440A93 /* Dictionary+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Addition.swift"; sourceTree = "<group>"; };
 		619FC95C2211494900440A93 /* CALayer+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Addition.swift"; sourceTree = "<group>"; };
 		619FC95E2211497100440A93 /* UIApplication+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Addition.swift"; sourceTree = "<group>"; };
+		619FC9612211572F00440A93 /* MDCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCache.swift; sourceTree = "<group>"; };
 		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Addition.swift"; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				619FC95522113BD800440A93 /* UNUserNotificationCenter+Addition.swift */,
+				619FC9612211572F00440A93 /* MDCache.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				619FC95022112B5300440A93 /* Decimal+Addition.swift in Sources */,
 				6137E8692111C23900E7CD29 /* UICollectionReusableView+Addition.swift in Sources */,
 				61798E09218AB1B1008F919C /* Counter.swift in Sources */,
+				619FC9622211572F00440A93 /* MDCache.swift in Sources */,
 				619FC95D2211494900440A93 /* CALayer+Addition.swift in Sources */,
 				619FC95622113BD800440A93 /* UNUserNotificationCenter+Addition.swift in Sources */,
 				6137E86A2111C23900E7CD29 /* UITableView+Addition.swift in Sources */,

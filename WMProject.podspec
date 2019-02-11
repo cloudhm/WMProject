@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.3.6'
+s.version      = '1.4.0'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -14,6 +14,8 @@ s.static_framework = true
 
 s.subspec 'Addition' do |addition|
   addition.source_files = 'Classes/Addition/*/*.{swift}'
+  addition.dependency 'SDWebImage'
+  addition.dependency 'SDWebImage/GIF'
 end
 
 s.subspec 'Animator' do |animator|
@@ -52,8 +54,6 @@ end
 
 s.subspec 'Core' do |core|
   core.source_files = 'Classes/Core/*.{swift}'
-  core.dependency 'SDWebImage'
-  core.dependency 'SDWebImage/GIF'
   core.dependency 'WMProject/Addition'
   core.dependency 'WMProject/Animator'
   core.dependency 'Alamofire'
