@@ -18,7 +18,4 @@ public extension UITableViewCell {
         }
         return cell
     }
-    @objc class func inferEstimatedHeight() -> CGFloat {
-        return UITableView.automaticDimension
-    }
 }
