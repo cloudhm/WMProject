@@ -27,6 +27,11 @@
 		6137E86D2111C23900E7CD29 /* UICollectionView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */; };
 		61798E06218AA3FE008F919C /* OneSignal+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61798E05218AA3FE008F919C /* OneSignal+Addition.swift */; };
 		61798E09218AB1B1008F919C /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61798E08218AB1B1008F919C /* Counter.swift */; };
+		619FC94E221115E700440A93 /* String+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC94D221115E700440A93 /* String+Addition.swift */; };
+		619FC95022112B5300440A93 /* Decimal+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC94F22112B5200440A93 /* Decimal+Addition.swift */; };
+		619FC95222113AD600440A93 /* UIView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95122113AD600440A93 /* UIView+Addition.swift */; };
+		619FC95422113B8400440A93 /* Array+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95322113B8400440A93 /* Array+Addition.swift */; };
+		619FC95622113BD800440A93 /* UNUserNotificationCenter+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC95522113BD800440A93 /* UNUserNotificationCenter+Addition.swift */; };
 		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61F4365621917BFF00BB7AE0 /* UIViewController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
@@ -60,6 +65,11 @@
 		6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Addition.swift"; sourceTree = "<group>"; };
 		61798E05218AA3FE008F919C /* OneSignal+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OneSignal+Addition.swift"; sourceTree = "<group>"; };
 		61798E08218AB1B1008F919C /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		619FC94D221115E700440A93 /* String+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Addition.swift"; sourceTree = "<group>"; };
+		619FC94F22112B5200440A93 /* Decimal+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Addition.swift"; sourceTree = "<group>"; };
+		619FC95122113AD600440A93 /* UIView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Addition.swift"; sourceTree = "<group>"; };
+		619FC95322113B8400440A93 /* Array+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Addition.swift"; sourceTree = "<group>"; };
+		619FC95522113BD800440A93 /* UNUserNotificationCenter+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNUserNotificationCenter+Addition.swift"; sourceTree = "<group>"; };
 		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Addition.swift"; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
@@ -162,15 +172,9 @@
 		6137E85B211197AF00E7CD29 /* Addition */ = {
 			isa = PBXGroup;
 			children = (
-				61FF7636212BE12A007C29B0 /* UIWindow+Addition.swift */,
-				6137E8632111C23900E7CD29 /* UICollectionReusableView+Addition.swift */,
-				6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */,
-				6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */,
-				6137E8642111C23900E7CD29 /* UITableView+Addition.swift */,
-				6137E8622111C23900E7CD29 /* UITableViewCell+Addition.swift */,
-				6137E8652111C23900E7CD29 /* UITableViewHeaderFooterView+Addition.swift */,
-				6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */,
-				61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */,
+				619FC95722113C1D00440A93 /* Others */,
+				619FC94C221115D200440A93 /* UIKit */,
+				619FC94A221115BB00440A93 /* Foundation */,
 			);
 			path = Addition;
 			sourceTree = "<group>";
@@ -189,6 +193,41 @@
 				61798E08218AB1B1008F919C /* Counter.swift */,
 			);
 			path = Counter;
+			sourceTree = "<group>";
+		};
+		619FC94A221115BB00440A93 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				619FC94D221115E700440A93 /* String+Addition.swift */,
+				619FC94F22112B5200440A93 /* Decimal+Addition.swift */,
+				619FC95322113B8400440A93 /* Array+Addition.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		619FC94C221115D200440A93 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				61FF7636212BE12A007C29B0 /* UIWindow+Addition.swift */,
+				6137E8632111C23900E7CD29 /* UICollectionReusableView+Addition.swift */,
+				6137E8672111C23900E7CD29 /* UICollectionView+Addition.swift */,
+				6137E8662111C23900E7CD29 /* UICollectionViewCell+Addition.swift */,
+				6137E8642111C23900E7CD29 /* UITableView+Addition.swift */,
+				6137E8622111C23900E7CD29 /* UITableViewCell+Addition.swift */,
+				6137E8652111C23900E7CD29 /* UITableViewHeaderFooterView+Addition.swift */,
+				6137E85C211197BA00E7CD29 /* UIImage+Addition.swift */,
+				61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */,
+				619FC95122113AD600440A93 /* UIView+Addition.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		619FC95722113C1D00440A93 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				619FC95522113BD800440A93 /* UNUserNotificationCenter+Addition.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		61A266762140B5BD00BF9551 /* Utils */ = {
@@ -380,9 +419,14 @@
 				6137E85D211197BA00E7CD29 /* UIImage+Addition.swift in Sources */,
 				6137E86C2111C23900E7CD29 /* UICollectionViewCell+Addition.swift in Sources */,
 				6137E83A21117A5400E7CD29 /* AppDelegate.swift in Sources */,
+				619FC95422113B8400440A93 /* Array+Addition.swift in Sources */,
+				619FC95022112B5300440A93 /* Decimal+Addition.swift in Sources */,
 				6137E8692111C23900E7CD29 /* UICollectionReusableView+Addition.swift in Sources */,
 				61798E09218AB1B1008F919C /* Counter.swift in Sources */,
+				619FC95622113BD800440A93 /* UNUserNotificationCenter+Addition.swift in Sources */,
 				6137E86A2111C23900E7CD29 /* UITableView+Addition.swift in Sources */,
+				619FC94E221115E700440A93 /* String+Addition.swift in Sources */,
+				619FC95222113AD600440A93 /* UIView+Addition.swift in Sources */,
 				6137E857211192FA00E7CD29 /* BaseTabBarController.swift in Sources */,
 				61FF7617212A65F7007C29B0 /* PresentedAnimatedTransitioningDelegate.swift in Sources */,
 				61FF7637212BE12A007C29B0 /* UIWindow+Addition.swift in Sources */,

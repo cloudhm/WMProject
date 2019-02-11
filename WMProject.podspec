@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.3.3'
+s.version      = '1.3.4'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -13,7 +13,7 @@ s.default_subspec = 'Core', 'Selection', 'DatePicker', 'Share', 'Utils', 'OneSig
 s.static_framework = true
 
 s.subspec 'Addition' do |addition|
-  addition.source_files = 'Classes/Addition/*.{swift}'
+  addition.source_files = 'Classes/Addition/*/*.{swift}'
 end
 
 s.subspec 'Animator' do |animator|
