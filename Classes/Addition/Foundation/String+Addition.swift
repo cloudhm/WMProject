@@ -183,7 +183,7 @@ public extension String {
      * group number
      * 对整数进行分组显示
      */
-    private func groupingSeperator() -> String {
+    public func groupingSeperator() -> String {
         return priceFormat(groupingSeparator: ",",
                            minimumIntegerDigits: 1,
                            maximumFractionDigits: 0,

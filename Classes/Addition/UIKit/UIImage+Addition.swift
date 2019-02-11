@@ -70,3 +70,50 @@ public extension UIImage {
         return data
     }
 }
+/**
+ * MAKR: crop image
+ * 图片截取
+ */
+public extension UIImage {
+    /**
+     * cropped image direction
+     * 截图方向
+     */
+    public enum ImageCropDirection {
+        case top
+        case left
+        case bottom
+        case right
+    }
+    /**
+     * crop image
+     * 在无法通过系统方法得到满足的情况下，采用此方法
+     * direction 截取方向，默认从上往下
+     * ratio 宽高比默认为1
+     */
+    public func croppedImage(direction : ImageCropDirection? = nil, targetRatio : CGFloat? = nil) -> UIImage {
+        let cropDirection : ImageCropDirection =  direction ?? .top
+        let widthHeightRatio : CGFloat = targetRatio ?? 1.0
+        var x : CGFloat = 0
+        var y : CGFloat = 0
+        var width : CGFloat = size.width
+        var height : CGFloat = size.height
+        switch cropDirection {
+        case .top:
+            height = min(size.width / widthHeightRatio, height)
+        case .left:
+            width = min(size.height * widthHeightRatio, width)
+        case .bottom:
+            height = min(size.width / widthHeightRatio, height)
+            y = size.height - height
+        case .right:
+            width = min(size.height * widthHeightRatio, width)
+            x = size.width - width
+        }
+        let croppedImage = cgImage?.cropping(to: CGRect(x: x,
+                                                        y: y,
+                                                        width: width,
+                                                        height: height))
+        return UIImage(cgImage: croppedImage!)
+    }
+}
