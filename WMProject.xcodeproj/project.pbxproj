@@ -44,6 +44,7 @@
 		619FC97E2212A04F00440A93 /* MDNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */; };
 		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61B1F63D2212E2A5006CFC10 /* UIImageView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F63C2212E2A5006CFC10 /* UIImageView+Addition.swift */; };
+		61B1F63F2212ECF1006CFC10 /* MDImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F63E2212ECF1006CFC10 /* MDImagePrefetcher.swift */; };
 		61F4365621917BFF00BB7AE0 /* UIViewController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
 		61FF7614212A5781007C29B0 /* SelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7612212A5781007C29B0 /* SelectorController.swift */; };
@@ -107,6 +108,7 @@
 		619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDNetworkMonitor.swift; sourceTree = "<group>"; };
 		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61B1F63C2212E2A5006CFC10 /* UIImageView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Addition.swift"; sourceTree = "<group>"; };
+		61B1F63E2212ECF1006CFC10 /* MDImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDImagePrefetcher.swift; sourceTree = "<group>"; };
 		61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Addition.swift"; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
 		61FF7612212A5781007C29B0 /* SelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				619FC96922116F5200440A93 /* MDNetworkStatus.swift */,
 				619FC96622116C1500440A93 /* MDNetworkTools.swift */,
 				619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */,
+				61B1F63E2212ECF1006CFC10 /* MDImagePrefetcher.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */,
 				61B1F63D2212E2A5006CFC10 /* UIImageView+Addition.swift in Sources */,
 				619FC95F2211497100440A93 /* UIApplication+Addition.swift in Sources */,
+				61B1F63F2212ECF1006CFC10 /* MDImagePrefetcher.swift in Sources */,
 				61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
