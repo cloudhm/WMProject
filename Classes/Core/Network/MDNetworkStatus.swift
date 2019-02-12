@@ -23,7 +23,7 @@ public class MDNetworkStatus : HandyJSON {
     // MARK: convert to error type
     public func asErr() -> Error {
         let domain = String(describing: MDNetworkStatus.self)
-        let errCode = Int(code) ?? defaultErrCode
+        let errCode = Int(code ?? "\(defaultErrCode)") ?? defaultErrCode
         if code == MDNetworkStatus.ERROR_CODE_ACCESS_TOKEN_EXPIRED.name {
             NotificationCenter.default.post(name: .LogoutAndShouldLoginAgain, object: nil)
         }
