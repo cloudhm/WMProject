@@ -51,8 +51,10 @@ public class MDNetworkTools {
         let method : HTTPMethod = type.method()
         var encoding : ParameterEncoding = (url.query?.isEmpty ?? true) ? JSONEncoding.default : URLEncoding.default
         switch method {
-        case .post, .put:
+        case .post, .put, .delete:
             encoding = parameters == nil ? encoding : JSONEncoding.default
+        case .get:
+            encoding = URLEncoding.default
         default:
             break
         }

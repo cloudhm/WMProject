@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.4.4'
+s.version      = '1.4.5'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
