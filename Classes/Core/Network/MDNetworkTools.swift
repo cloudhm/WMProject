@@ -113,6 +113,8 @@ public class MDNetworkTools {
             var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL:false)
             urlComponents?.host = baseURL?.host
             urlComponents?.scheme = baseURL?.scheme
+            let path = (baseURL?.path ?? "") + (urlComponents?.path ?? "")
+            urlComponents?.path = path
             let newURL = urlComponents?.url
             assert(newURL != nil)
             return newURL!
