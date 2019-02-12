@@ -9,11 +9,16 @@
 import Foundation
 import Alamofire
 public extension Notification.Name {
-    static let NetworkDidChange = Notification.Name("MDNetworkMonitor.NetworkDidChange")
+    public static let NetworkDidChange = Notification.Name("MDNetworkMonitor.NetworkDidChange")
 }
 public class MDNetworkMonitor {
     public static let shared : MDNetworkMonitor = MDNetworkMonitor()
     private var networkReachabilityManager : NetworkReachabilityManager?
+    public var isReachableOnEthernetOrWiFi : Bool {
+        get {
+            return networkReachabilityManager?.isReachableOnEthernetOrWiFi ?? false
+        }
+    }
     public func startListening(host : String) {
         stopListening()
         networkReachabilityManager = NetworkReachabilityManager(host: host)
