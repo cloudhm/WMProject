@@ -49,7 +49,13 @@ public class MDNetworkTools {
         let newURL = buildURL(url: url)
         // 1.获取类型
         let method : HTTPMethod = type.method()
-        let encoding : ParameterEncoding = (url.query?.isEmpty ?? true) ? JSONEncoding.default : URLEncoding.default
+        var encoding : ParameterEncoding = (url.query?.isEmpty ?? true) ? JSONEncoding.default : URLEncoding.default
+        switch method {
+        case .post, .put:
+            encoding = parameters == nil ? encoding : JSONEncoding.default
+        default:
+            break
+        }
         // 2.发送网络请求
         return Alamofire.request(newURL,
                                  method: method,
