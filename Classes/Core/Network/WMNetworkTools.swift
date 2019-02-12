@@ -35,6 +35,7 @@ public enum MethodType {
 
 public class WMNetworkTools {
     public static let `default`: WMNetworkTools = WMNetworkTools()
+    public var baseURL : URL?
     /**
      * basic HTTP/HTTPS netwrok request method, support get/post/put/delete
      * 基本的网络请求, 支持(GET/POST/PUT/DELETE)
@@ -45,11 +46,12 @@ public class WMNetworkTools {
                             headers : HTTPHeaders? = nil,
                             success: @escaping successCallback,
                             failed: failedCallback? = nil) -> DataRequest {
+        let newURL = buildURL(url: url)
         // 1.获取类型
         let method : HTTPMethod = type.method()
         let encoding : ParameterEncoding = (url.query?.isEmpty ?? true) ? JSONEncoding.default : URLEncoding.default
         // 2.发送网络请求
-        return Alamofire.request(url,
+        return Alamofire.request(newURL,
                                  method: method,
                                  parameters: parameters,
                                  encoding: encoding,
@@ -71,10 +73,13 @@ public class WMNetworkTools {
                        headers : HTTPHeaders? = nil,
                        success: @escaping successCallback,
                        failed: failedCallback? = nil) {
+        let newURL = buildURL(url: url)
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            multipartFormData.append(data, withName: dataInfo.name, fileName: dataInfo.fileName, mimeType: dataInfo.mimeType)
+            multipartFormData.append(data, withName: dataInfo.name,
+                                     fileName: dataInfo.fileName,
+                                     mimeType: dataInfo.mimeType)
         },
-                         to: url,
+                         to: newURL,
                          method: .post,
                          headers: headers)
         {[weak self] (encodingResult) in
@@ -94,6 +99,19 @@ public class WMNetworkTools {
             }
         }
     }
+    // MARK:
+    private func buildURL(url : URL) -> URL {
+        if url.host == nil && baseURL != nil {
+            var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL:false)
+            urlComponents?.host = baseURL?.host
+            urlComponents?.scheme = baseURL?.scheme
+            let newURL = urlComponents?.url
+            assert(newURL != nil)
+            return newURL!
+        }
+        return url
+    }
+    // MARK: handle response
     private func handleResponse(result : Any?, success: @escaping successCallback, failed: failedCallback? = nil) {
         let status = WMNetworkStatus.deserialize(from: result as? [String : Any])
         if status?.code == WMNetworkStatus.NO_ERROR.name {

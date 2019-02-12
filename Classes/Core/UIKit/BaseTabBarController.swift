@@ -8,6 +8,15 @@
 
 import UIKit
 open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
+    /**
+     * animated switch
+     * 开启或关闭标签切换动画
+     */
+    open var canAnimated : Bool {
+        get {
+            return false
+        }
+    }
     open override func awakeFromNib() {
         super.awakeFromNib()
         for item in tabBar.items! {
@@ -27,6 +36,7 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
     }
     // MARK: UITabBarControllerDelegate
     open func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if !canAnimated { return nil }
         guard let fromIndex = tabBarController.viewControllers?.index(of: fromVC) else { return nil }
         guard let toIndex = tabBarController.viewControllers?.index(of: toVC) else { return nil }
         /**
