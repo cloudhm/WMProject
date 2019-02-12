@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = 'WMProject'
-s.version      = '1.4.1'
+s.version      = '1.4.2'
 s.summary      = 'default configuration'
 s.homepage     = 'https://github.com/cloudhm/WMProject'
 s.license      = 'LICENSE'
@@ -56,7 +56,8 @@ s.subspec 'Core' do |core|
   core.source_files = 'Classes/Core/*/*.{swift}'
   core.dependency 'WMProject/Addition'
   core.dependency 'WMProject/Animator'
-  core.dependency 'Alamofire', 'HandyJSON'
+  core.dependency 'Alamofire'
+  core.dependency 'HandyJSON', '=4.2.0'
 end
 
 end

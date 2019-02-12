@@ -1,5 +1,5 @@
 //
-//  WMNetworkTools.swift
+//  MDNetworkTools.swift
 //  WhatsMode
 //
 //  Created by Brave on 2019/1/28.
@@ -33,8 +33,8 @@ public enum MethodType {
     }
 }
 
-public class WMNetworkTools {
-    public static let `default`: WMNetworkTools = WMNetworkTools()
+public class MDNetworkTools {
+    public static let `default`: MDNetworkTools = MDNetworkTools()
     public var baseURL : URL?
     /**
      * basic HTTP/HTTPS netwrok request method, support get/post/put/delete
@@ -91,7 +91,7 @@ public class WMNetworkTools {
                         self?.handleResponse(result: result, success: success, failed: failed)
                     } else {
                         // no response data
-                        failed?(WMNetworkStatus.default?.asErr())
+                        failed?(MDNetworkStatus.default?.asErr())
                     }
                 }
             case .failure(let err):
@@ -113,8 +113,8 @@ public class WMNetworkTools {
     }
     // MARK: handle response
     private func handleResponse(result : Any?, success: @escaping successCallback, failed: failedCallback? = nil) {
-        let status = WMNetworkStatus.deserialize(from: result as? [String : Any])
-        if status?.code == WMNetworkStatus.NO_ERROR.name {
+        let status = MDNetworkStatus.deserialize(from: result as? [String : Any])
+        if status?.code == MDNetworkStatus.NO_ERROR.name {
             success(result as? [String : Any])
         } else {
             failed?(status?.asErr())
