@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 ///成功数据的回调
-public typealias successCallback = (([String : Any]?) -> (Void))
+public typealias successCallback = (([String : Any]) -> (Void))
 ///失败的回调
 public typealias failedCallback = ((Error?) -> (Void))
 ///支持的网络请求方式
@@ -123,7 +123,8 @@ public class MDNetworkTools {
     private func handleResponse(result : Any?, success: @escaping successCallback, failed: failedCallback? = nil) {
         let status = MDNetworkStatus.deserialize(from: result as? [String : Any])
         if status?.code == MDNetworkStatus.NO_ERROR.name {
-            success(result as? [String : Any])
+            // code == 1, access API success, set default value, prevenet from throwing exception
+            success(result as? [String : Any] ?? [:])
         } else {
             failed?(status?.asErr())
         }
