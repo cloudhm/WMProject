@@ -45,7 +45,7 @@ public class MDNetworkTools {
                             parameters : [String : Any]? = nil,
                             headers : HTTPHeaders? = nil,
                             success: @escaping successCallback,
-                            failed: failedCallback? = nil) -> DataRequest {
+                            failed: failedCallback? = nil) -> URLSessionTask? {
         let newURL = buildURL(url: url)
         // 1.获取类型
         let method : HTTPMethod = type.method()
@@ -73,7 +73,7 @@ public class MDNetworkTools {
                 case .failure(let error):
                     failed?(error)
                 }
-        }
+        }.task
     }
     public func upload(url : URL,
                        data : Data,

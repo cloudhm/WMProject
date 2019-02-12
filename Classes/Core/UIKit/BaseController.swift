@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 public extension Notification.Name {
     static let WMProjectControllerViewDidAppear = Notification.Name("WMProject.BaseController.ViewDidAppear")
 }
@@ -21,7 +20,7 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    public var dataRequests : [DataRequest?] = []
+    public var tasks : [URLSessionTask?] = []
     open override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = .init(rawValue: 0)
@@ -78,8 +77,8 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
-        for dataReqeust in dataRequests {
-            dataReqeust?.cancel()
+        for task in tasks {
+            task?.cancel()
         }
     }
 }
