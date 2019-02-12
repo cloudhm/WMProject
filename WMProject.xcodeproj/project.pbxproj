@@ -41,6 +41,7 @@
 		619FC96A22116F5200440A93 /* MDNetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC96922116F5200440A93 /* MDNetworkStatus.swift */; };
 		619FC97A2211853300440A93 /* HandySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC9792211853300440A93 /* HandySwiftTests.swift */; };
 		619FC97B2211859C00440A93 /* MDNetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC96922116F5200440A93 /* MDNetworkStatus.swift */; };
+		619FC97E2212A04F00440A93 /* MDNetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */; };
 		61A266782140B5CF00BF9551 /* LeakAvoider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A266772140B5CF00BF9551 /* LeakAvoider.swift */; };
 		61F4365621917BFF00BB7AE0 /* UIViewController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
@@ -102,6 +103,7 @@
 		619FC96F221184FF00440A93 /* WMProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		619FC973221184FF00440A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		619FC9792211853300440A93 /* HandySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandySwiftTests.swift; sourceTree = "<group>"; };
+		619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDNetworkMonitor.swift; sourceTree = "<group>"; };
 		61A266772140B5CF00BF9551 /* LeakAvoider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeakAvoider.swift; sourceTree = "<group>"; };
 		61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Addition.swift"; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				619FC96922116F5200440A93 /* MDNetworkStatus.swift */,
 				619FC96622116C1500440A93 /* MDNetworkTools.swift */,
+				619FC97D2212A04F00440A93 /* MDNetworkMonitor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				619FC959221141FC00440A93 /* Int+Addition.swift in Sources */,
 				6137E83A21117A5400E7CD29 /* AppDelegate.swift in Sources */,
 				619FC95422113B8400440A93 /* Array+Addition.swift in Sources */,
+				619FC97E2212A04F00440A93 /* MDNetworkMonitor.swift in Sources */,
 				619FC95022112B5300440A93 /* Decimal+Addition.swift in Sources */,
 				6137E8692111C23900E7CD29 /* UICollectionReusableView+Addition.swift in Sources */,
 				61798E09218AB1B1008F919C /* Counter.swift in Sources */,
