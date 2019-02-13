@@ -38,7 +38,7 @@ public extension String {
      * 判断IDFA是否有效
      */
     public func validateIDFA() -> Bool {
-        return !matches(by: "([0-]+)")
+        return matches(by: "[a-zA-Z1-9]+")
     }
     /**
      * validate host
