@@ -25,4 +25,9 @@ public class MDCache {
     public static func removeImageForKey(_ key: String?) {
         SDImageCache.shared().removeImage(forKey: key, withCompletion: nil)
     }
+    public static func clearDisk(_ completion : (()->())? = nil) {
+        SDImageCache.shared().clearDisk {
+            completion?()
+        }
+    }
 }
