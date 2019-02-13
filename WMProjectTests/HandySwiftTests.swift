@@ -19,19 +19,19 @@ class HandySwiftTests: XCTestCase {
     }
 
     func testExample() {
-        var status = WMNetworkStatus.deserialize(from: ["code": "-1", "message" : NSNull()])
+        var status = MDNetworkStatus.deserialize(from: ["code": "-1", "message" : NSNull()])
         XCTAssertNotNil(status)
-        status = WMNetworkStatus.deserialize(from: ["code": "0", "message" : NSNull()])
+        status = MDNetworkStatus.deserialize(from: ["code": "0", "message" : NSNull()])
         XCTAssertNotNil(status)
-        status = WMNetworkStatus.deserialize(from: ["code": NSNull(), "message" : NSNull()])
+        status = MDNetworkStatus.deserialize(from: ["code": NSNull(), "message" : NSNull()])
         XCTAssertNotNil(status)
-        status = WMNetworkStatus.deserialize(from: ["message" : NSNull()])
+        status = MDNetworkStatus.deserialize(from: ["message" : NSNull()])
         XCTAssertNotNil(status)
-        status = WMNetworkStatus.deserialize(from: ["code": NSNull()])
+        status = MDNetworkStatus.deserialize(from: ["code": NSNull()])
         XCTAssertNotNil(status)
-        let status1 = WMNetworkStatus.deserialize(from: [] as? [String : Any])
+        let status1 = MDNetworkStatus.deserialize(from: [] as? [String : Any])
         XCTAssertNil(status1)
-        let status2 = WMNetworkStatus.deserialize(from: [:])
+        let status2 = MDNetworkStatus.deserialize(from: [:])
         XCTAssertNotNil(status2)
     }
 

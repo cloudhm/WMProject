@@ -13,7 +13,7 @@ import FLAnimatedImage
 
 public extension UIImageView {
     public typealias ExternalCOmpletionBlock = (UIImage?, Error?) -> ()
-    public func renderRemoteImage(with url : URL?, placeholderImage : UIImage, _ completion: ExternalCOmpletionBlock? = nil) {
+    public func renderRemoteImage(with url : URL?, placeholderImage : UIImage?, _ completion: ExternalCOmpletionBlock? = nil) {
         sd_setImage(with: url,
                     placeholderImage: placeholderImage,
                     options: .retryFailed) { (image, error, _, _) in
