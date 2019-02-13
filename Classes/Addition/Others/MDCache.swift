@@ -16,13 +16,13 @@ public class MDCache {
         let size = SDImageCache.shared().getSize()
         return size
     }
-    public static func imageForKey(_ key: String) -> UIImage? {
+    public static func imageForKey(_ key: String?) -> UIImage? {
         return SDImageCache.shared().imageFromCache(forKey: key)
     }
-    public static func setImage(_ image: UIImage, forKey key: String) {
+    public static func setImage(_ image: UIImage?, forKey key: String?) {
         SDImageCache.shared().store(image, forKey: key, completion: nil)
     }
-    public static func removeImageForKey(_ key: String) {
+    public static func removeImageForKey(_ key: String?) {
         SDImageCache.shared().removeImage(forKey: key, withCompletion: nil)
     }
 }
