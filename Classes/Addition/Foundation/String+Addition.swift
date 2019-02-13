@@ -17,47 +17,35 @@ public extension String {
      * 判断字母和数字
      */
     public func validateNumberAndAlphabet() -> Bool {
-        return validate(by: "[^0-9a-zA-Z]")
+        return matches(by: "[0-9a-zA-Z]+")
     }
     /**
      * validate only alphabet
      * 判断仅字母
      */
     public func validateAlphabet() -> Bool {
-        return validate(by: "[^a-zA-Z]")
+        return matches(by: "[a-zA-Z]+")
     }
     /**
      * validate only alphabet, number, '_', '-'
      * 判断instagram 用户名输入正确性
      */
     public func validateIGNameInput() -> Bool {
-        return validate(by: "[^0-9a-zA-Z_.]")
+        return matches(by: "([0-9a-zA-Z_.]+){1,30}")
     }
     /**
      * validate IDFA
      * 判断IDFA是否有效
      */
     public func validateIDFA() -> Bool {
-        return !validate(by: "[^0-]")
+        return !matches(by: "([0-]+)")
     }
     /**
      * validate host
      * 判断域名
      */
     public func validateHost(mainHost : String) -> Bool {
-        return !validate(by: "\\s*(\(mainHost))$")
-    }
-    /**
-     * validate string by regular expression, find invlidated strings
-     * 判断字符串合法性, 根据正则表达式，搜索不符合正则表达式的字符串。
-     */
-    public func validate(by regularExpression : String) -> Bool {
-        let regularExpression = try! NSRegularExpression(pattern: regularExpression,
-                                                         options: .caseInsensitive)
-        let result = regularExpression.matches(in: self,
-                                               options: .reportProgress,
-                                               range: NSRange(location: 0, length: count))
-        return result.isEmpty
+        return matches(by: "[a-zA-Z]*\\.?(\(mainHost))")
     }
     
     // Validate AE, SA phone number
