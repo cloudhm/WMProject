@@ -133,7 +133,7 @@ public extension String {
         let result = regularExpression.matches(in: self,
                                                options: .reportProgress,
                                                range: NSRange(location: 0, length: count))
-        if (result.first?.numberOfRanges ?? 0) > 0 {
+        if (result.first?.numberOfRanges ?? 0) > 1 {
             if #available(iOS 11.0, *) {
                 if let rangeName = rangeName {
                     if let range = result.first?.range(withName: rangeName) {
@@ -141,7 +141,7 @@ public extension String {
                     }
                 }
             }
-            if let range = result.first?.range(at: 0) {
+            if let range = result.first?.range(at: 1) {
                 return NSString(string: self).substring(with: range)
             }
         }
