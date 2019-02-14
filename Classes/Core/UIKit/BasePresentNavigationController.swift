@@ -1,5 +1,5 @@
 //
-//  BaseNavigationController.swift
+//  BasePresentNavigationController.swift
 //  WMProject
 //
 //  Created by cloud on 2019/2/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BaseNavigationController: UINavigationController {
+open class BasePresentNavigationController: UINavigationController {
     private let presentedAnimatedTransitioningDelegate = PresentedAnimatedTransitioningDelegate()
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
