@@ -7,19 +7,31 @@
 //
 
 import UIKit
-open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate {
-    /**
-     * animated switch
-     * 开启或关闭标签切换动画
-     */
-    open var canAnimated : Bool {
+public protocol BaseTabBarControllerConfiguration {
+    var canAnimated : Bool { get }
+}
+extension BaseTabBarControllerConfiguration where Self: UITabBarController {
+    public var canAnimated: Bool {
         get {
             return false
         }
     }
+}
+open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate, BaseTabBarControllerConfiguration {
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setupUI()
+    }
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupUI()
+    }
     open override func awakeFromNib() {
         super.awakeFromNib()
-        for item in tabBar.items! {
+        setupUI()
+    }
+    open func setupUI() {
+        for item in tabBar.items ?? [] {
             item.image = item.image?.withRenderingMode(.alwaysOriginal)
             item.selectedImage = item.selectedImage?.withRenderingMode(.alwaysOriginal)
             let defaultFont = UIFont.systemFont(ofSize: 9, weight: .regular)
@@ -34,6 +46,7 @@ open class BaseTabBarController: UITabBarController, UITabBarControllerDelegate 
         tabBar.shadowImage = UIImage.imageWithColor(#colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9529411765, alpha: 1))
         delegate = self
     }
+
     // MARK: UITabBarControllerDelegate
     open func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if !canAnimated { return nil }

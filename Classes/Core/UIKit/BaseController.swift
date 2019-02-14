@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 public extension Notification.Name {
     static let WMProjectControllerViewDidAppear = Notification.Name("WMProject.BaseController.ViewDidAppear")
 }
@@ -15,10 +16,15 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
     open var canSideBack : Bool = false
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.hidesBottomBarWhenPushed = true
+        setup()
     }
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
+    }
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+        setup()
     }
     public var tasks : [URLSessionTask?] = []
     open override func viewDidLoad() {
@@ -63,6 +69,9 @@ open class BaseController: UIViewController, UIGestureRecognizerDelegate {
             canSideBack = index > 0
         }
         configureCustomizedNavigationBar()
+    }
+    private func setup() {
+        self.hidesBottomBarWhenPushed = true
     }
     open func configureCustomizedNavigationBar(){
         
