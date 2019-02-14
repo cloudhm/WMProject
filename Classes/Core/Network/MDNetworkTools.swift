@@ -44,6 +44,7 @@ public class MDNetworkTools {
                             type : MethodType,
                             parameters : [String : Any]? = nil,
                             headers : HTTPHeaders? = nil,
+                            validate : Bool? = true,
                             success: @escaping successCallback,
                             failed: failedCallback? = nil) -> URLSessionTask? {
         let newURL = buildURL(url: url)
@@ -68,7 +69,11 @@ public class MDNetworkTools {
             .responseJSON {[weak self] (response) in
                 switch response.result {
                 case .success(let result):
-                    self?.handleResponse(result: result, success: success, failed: failed)
+                    if validate ?? true {
+                        self?.handleResponse(result: result, success: success, failed: failed)
+                    } else {
+                        success(result as? [String : Any] ?? [:])
+                    }
                 // 请求失败
                 case .failure(let error):
                     failed?(error)
