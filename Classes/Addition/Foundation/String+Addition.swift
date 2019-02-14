@@ -126,6 +126,27 @@ public extension String {
         }
         return self
     }
+    
+    public func getFirstMatchedString(by regularExpression : String, rangeName : String? = nil) -> String? {
+        let regularExpression = try! NSRegularExpression.init(pattern: regularExpression,
+                                                              options: .caseInsensitive)
+        let result = regularExpression.matches(in: self,
+                                               options: .reportProgress,
+                                               range: NSRange(location: 0, length: count))
+        if (result.first?.numberOfRanges ?? 0) > 0 {
+            if #available(iOS 11.0, *) {
+                if let rangeName = rangeName {
+                    if let range = result.first?.range(withName: rangeName) {
+                        return NSString(string: self).substring(with: range)
+                    }
+                }
+            }
+            if let range = result.first?.range(at: 0) {
+                return NSString(string: self).substring(with: range)
+            }
+        }
+        return nil
+    }
 }
 
 /**
