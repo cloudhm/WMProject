@@ -46,6 +46,7 @@
 		61B1F63D2212E2A5006CFC10 /* UIImageView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F63C2212E2A5006CFC10 /* UIImageView+Addition.swift */; };
 		61B1F63F2212ECF1006CFC10 /* MDImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F63E2212ECF1006CFC10 /* MDImagePrefetcher.swift */; };
 		61B1F647221502F0006CFC10 /* BasePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F646221502F0006CFC10 /* BasePresentViewController.swift */; };
+		61B1F67122151CA2006CFC10 /* BasePresentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B1F67022151CA2006CFC10 /* BasePresentNavigationController.swift */; };
 		61F4365621917BFF00BB7AE0 /* UIViewController+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */; };
 		61FF7613212A5781007C29B0 /* SelectorBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7611212A5781007C29B0 /* SelectorBean.swift */; };
 		61FF7614212A5781007C29B0 /* SelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FF7612212A5781007C29B0 /* SelectorController.swift */; };
@@ -111,6 +112,7 @@
 		61B1F63C2212E2A5006CFC10 /* UIImageView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Addition.swift"; sourceTree = "<group>"; };
 		61B1F63E2212ECF1006CFC10 /* MDImagePrefetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDImagePrefetcher.swift; sourceTree = "<group>"; };
 		61B1F646221502F0006CFC10 /* BasePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentViewController.swift; sourceTree = "<group>"; };
+		61B1F67022151CA2006CFC10 /* BasePresentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentNavigationController.swift; sourceTree = "<group>"; };
 		61F4365521917BFF00BB7AE0 /* UIViewController+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Addition.swift"; sourceTree = "<group>"; };
 		61FF7611212A5781007C29B0 /* SelectorBean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorBean.swift; sourceTree = "<group>"; };
 		61FF7612212A5781007C29B0 /* SelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				6137E84E21117FA800E7CD29 /* BaseController.swift */,
 				6137E84F21117FA800E7CD29 /* BaseTableView.swift */,
 				61B1F646221502F0006CFC10 /* BasePresentViewController.swift */,
+				61B1F67022151CA2006CFC10 /* BasePresentNavigationController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				6137E85D211197BA00E7CD29 /* UIImage+Addition.swift in Sources */,
 				6137E86C2111C23900E7CD29 /* UICollectionViewCell+Addition.swift in Sources */,
 				619FC959221141FC00440A93 /* Int+Addition.swift in Sources */,
+				61B1F67122151CA2006CFC10 /* BasePresentNavigationController.swift in Sources */,
 				6137E83A21117A5400E7CD29 /* AppDelegate.swift in Sources */,
 				619FC95422113B8400440A93 /* Array+Addition.swift in Sources */,
 				619FC97E2212A04F00440A93 /* MDNetworkMonitor.swift in Sources */,
