@@ -25,13 +25,13 @@ end
 s.subspec 'Selection' do |selection|
   selection.source_files = 'Classes/Components/Selection/*.{swift}'
   selection.dependency 'SnapKit', '= 4.2.0'
-  selection.dependency 'WMProject/Animator'
+  selection.dependency 'MDProject/Animator'
 end
 
 s.subspec 'DatePicker' do |datepicker|
   datepicker.source_files = 'Classes/Components/DatePicker/*.{swift}'
   datepicker.dependency 'SnapKit'
-  datepicker.dependency 'WMProject/Animator'
+  datepicker.dependency 'MDProject/Animator'
 end
 
 s.subspec 'Share' do |share|
@@ -54,8 +54,8 @@ end
 
 s.subspec 'Core' do |core|
   core.source_files = 'Classes/Core/*/*.{swift}'
-  core.dependency 'WMProject/Addition'
-  core.dependency 'WMProject/Animator'
+  core.dependency 'MDProject/Addition'
+  core.dependency 'MDProject/Animator'
   core.dependency 'Alamofire'
   core.dependency 'HandyJSON', '=4.2.0'
 end
