@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-s.name         = 'WMProject'
-s.version      = '1.4.25'
+s.name         = 'MDProject'
+s.version      = '1.4.26'
 s.summary      = 'default configuration'
-s.homepage     = 'https://github.com/cloudhm/WMProject'
+s.homepage     = 'https://git.socialeras.com/cloud.huang/MDProject'
 s.license      = 'LICENSE'
 s.authors      = { 'cloudhm' => 'cloud.huang@whatsmode.com'}
 s.platform     = :ios, '10.0'
-s.source       = { :git => 'https://github.com/cloudhm/WMProject.git',:tag =>s.version}
+s.source       = { :git => 'https://git.socialeras.com/cloud.huang/MDProject.git',:tag =>s.version}
 s.requires_arc  = true
 s.swift_version = '4.2'
 s.default_subspec = 'Core', 'Selection', 'DatePicker', 'Share', 'Utils', 'OneSignalAddition', 'Counter'
